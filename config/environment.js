@@ -6,6 +6,18 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+    //contentSecurityPolicy:{'connect-src':"'self' wss://*.firebaseio.com"},
+    firebase:{
+      apiKey: "AIzaSyB9Am7nhEoud0OAUR6JckDqPSipsMCH1Ug",
+      authDomain: "budgetapp-378d4.firebaseapp.com",
+      databaseURL: "https://budgetapp-378d4.firebaseio.com",
+      projectId: "budgetapp-378d4",
+      storageBucket: "budgetapp-378d4.appspot.com",
+      messagingSenderId: "429304776368"
+    },
+    torii:{
+      sessionServiceName: 'session'
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -24,11 +36,11 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+     ENV.APP.LOG_RESOLVER = true;
+     ENV.APP.LOG_ACTIVE_GENERATION = true;
+     ENV.APP.LOG_TRANSITIONS = true;
+     ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
+     ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
   if (environment === 'test') {
