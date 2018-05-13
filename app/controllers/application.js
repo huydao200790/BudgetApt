@@ -2,6 +2,7 @@ import Controller from '@ember/controller';
 export default Controller.extend({
   actions: {
     signIn:function(){
+      //sign in by email and password
       this.get('session').open('firebase', {
             provider:'password',
             email: this.get('emailAddressC'),
